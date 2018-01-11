@@ -26,7 +26,7 @@ passport.use(new localStrategy({
 		where: {email: email}
 	}).then(function(user){
 		console.log('passport promise');
-		console.log(user);
+		// console.log(req.body);
 		if(!user || !user.isValidPassword(password)){
 			callback(null, false);
 		} else {

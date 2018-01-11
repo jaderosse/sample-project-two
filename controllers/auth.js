@@ -28,19 +28,24 @@ router.post('/signup', function(req, res, next){
       		password: req.body.password,
       		dob: req.body.dob,
       		locationcity: req.body.locationcity,
-      		locationstate:req.body.locationstate
+      		locationstate: req.body.locationstate
     	}
-	}).then(function(user, wasCreated){
+	}).spread(function(user, wasCreated){
+		console.log('getting to if statement');
 		if(wasCreated){
 			passport.authenticate('local', {
 				successRedirect: '/profile',
 				successFlash: 'Successfully logged in',
 			})(req, res, next);
+			console.log('success');
 		} else {
 			req.flash('error', 'Email already exists');
 			res.redirect('/auth/login');
+			console.log('signup error');
 		}
 	}).catch(function(err){
+		console.log('catch error');
+		console.log('error', err.message);
 		req.flash('error', err.message);
 		res.redirect('/');
 	});
