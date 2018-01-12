@@ -20,7 +20,7 @@ passport.use(new localStrategy({
 	passwordField: 'password'
 }, function(email, password, callback){
 	console.log('got to passport auth');
-	console.log(email, password);
+	// console.log(email, password);
 	// console.log(locationcity, locationstate);
 	db.user.findOne({
 		where: {email: email}

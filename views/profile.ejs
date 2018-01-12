@@ -1,6 +1,17 @@
 <h1>This is your funnn profile</h1>
 
-<h3>Welcome back, <%= currentUser.firstname %></h3>
 
+<h3>Welcome back, <%= currentUser.firstname %></h3>
+<div class="container">
+	<h2>
+		<%= results.current_observation.display_location.city %>
+	</h2>
+	<h4>
+		<%= results.current_observation.temp_f %> °F
+	</h4>
+</div>
+
+<div class="test" value="<%=results.current_observation.temp_f%>"></div>
 <button type="submit" id="exercise" class="btn btn-info">Add 30 minutes of exercise!</button>
 <button type="submit" id="water" class="btn btn-danger">You drank 8oz of water!</button>
+<button type="button" id="reset" class="btn btn-primary">Done for the day?</button>
