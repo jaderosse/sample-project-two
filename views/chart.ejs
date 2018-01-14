@@ -12,7 +12,7 @@ var chart = new Chart(ctx, {
       <% }); %>
       ],
       datasets: [{
-         label: 'DRANK',
+         label: 'Water Drank',
          data: [
          	<%stats.forEach(function(stat){ %>
          		<%= stat.hasDrank %>,
@@ -20,7 +20,7 @@ var chart = new Chart(ctx, {
          ],
          backgroundColor: '#dc3912'
       }, {
-         label: 'DIFFFFF',
+         label: 'Difference (Expected Drinks - Water Drank)',
          data: [
          	<%stats.forEach(function(stat){ %>
          		<%= stat.diff %>,

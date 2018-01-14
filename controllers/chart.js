@@ -15,9 +15,7 @@ router.post('/', function(req, res) {
 	}).then(function(stat) {
     	res.redirect('/chart');
 	}).catch(function(err){
-		console.log('catch error');
 		console.log('error', err.message);
-		req.flash('error', err.message);
 		res.redirect('/profile');
 	});
 });
