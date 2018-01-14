@@ -2,7 +2,7 @@ var waterDrank = 0;
 var toDrink = 64;
 var exercise = 0;
 var count = 0;
-// var rainAnimation = 
+ 
 var sunAnimation = function(){
 	document.body.style.backgroundImage = "url('/img/bike_sun-ANIMATION.gif')";
 }
@@ -12,7 +12,7 @@ var endSun = function(){
 }
 
 var rainAnimation = function(){
-	document.body.style.backgroundImage = "url('/img/bike_rain-ANIMATION.gif')";
+	document.body.style.backgroundImage = "url('/img/giffy_rain.gif')";
 }
 
 var endRain = function(){
@@ -21,7 +21,8 @@ var endRain = function(){
 
 
 var test = $('.test').attr('value');
-var weather = $('.weather').attr('value');
+// var weather = $('.weather').attr('value');
+var weather = 'heavy rain';
 if(test >= 50){
 		console.log(test);
 		console.log(weather);
@@ -42,7 +43,8 @@ if(weather.includes("rain")){
 
 $('#exercise').click(function(){
 	if(weather.includes("rain")){
-
+		rainAnimation();
+		setTimeout(endRain, 5000);
 	} else {
 		sunAnimation();
 		setTimeout(endSun, 5000);
