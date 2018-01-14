@@ -2,3 +2,9 @@ a {
 	color: white;
 	margin: 0 50px;
 }
+
+body {
+	background-image: url("/img/bike.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
