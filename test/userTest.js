@@ -50,7 +50,6 @@ describe('POST /auth/signup', function(){
 		request(app).post('/auth/signup')
 		.type('form')
 		.send({
-			username: 'usernameee',
 			password: 'test123',
 			firstname: 'jade',
 			lastname: 'rosse',
@@ -70,3 +69,34 @@ describe('GET /profile', function(){
 		.expect(200, done);
 	});
 });
+
+describe('GET /chart', function(){
+	it('should return 200 response', function(done){
+		request(app).get('/chart')
+		.expect(200, done);
+	});
+});
+
+describe('GET /auth/logout', function(){
+	it('should logout user, redirect home', function(done){
+		request(app).get('/auth/logout')
+		.expect(200, done);
+	});
+});
+
+describe('POST /chart', function(){
+	it('should create new stats for user and redirect to chart', function(done){
+		setTimeout(function(){
+		request(app).post('/chart')
+		.type('form')
+		.send({
+			hasDrank: 8,
+			diff: 16,
+			userId: 33
+		})
+		.expect('Location', '/chart')
+		.expect(302, done);
+		} , 5000);
+	});
+});
+

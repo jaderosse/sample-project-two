@@ -8,6 +8,7 @@ var flash = require('connect-flash');
 var passport = require('./config/passportConfig')
 var session = require('express-session');
 var isLoggedIn = require('./middleware/isLoggedIn');
+var chart = require('chart.js');
 var app = express();
 
 app.set('view engine', 'ejs');
@@ -29,27 +30,16 @@ app.use(function(req, res, next){
 });
 
 app.get('/', function(req, res){
-	res.render('home');
+	res.render('auth/login');
 });
 
-// app.get('/profile', isLoggedIn, function(req, res){
-// 	var city = req.user.locationcity;
-// 	var state = req.user.locationstate;
-// 	var weatherUrl = 'http://api.wunderground.com/api/af1c838078e4bd8f/conditions/q/' + state
-// 	+ '/' + city + '.json'
-// 		request({
-// 			url: weatherUrl,
-// 			apikey: process.env.API_KEY
-// 		}, function(error, response, body){
-// 		var dataObj = JSON.parse(body);
-// 		var cityName = dataObj.current_observation.display_location.city;
-// 		var temp = dataObj.current_observation.temp_f
-// 		res.send(cityName + temp);
-// 	});	
-// });
+app.get('/resources', function(req, res){
+	res.render('resources');
+});
 
 app.use('/auth', require('./controllers/auth'));
 app.use('/profile', require('./controllers/profile'));
+app.use('/chart', require('./controllers/chart'));
 
 app.listen(process.env.PORT || 3000);
 

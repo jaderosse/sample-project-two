@@ -4,7 +4,6 @@ module.exports = function(req, res, next){
 		res.redirect('/auth/login');
 	} else {
 		next();
-		// console.log(req.user.locationcity);
 	}	
 }
 

@@ -1,0 +1,53 @@
+<h1>Chart Time</h1>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var chart = new Chart(ctx, {
+   type: 'bar',
+   data: {
+      labels: [
+      <% stats.forEach(function(stat){ %>
+      	<%= stat.id %>,
+      <% }); %>
+      ],
+      datasets: [{
+         label: 'DRANK',
+         data: [
+         	<%stats.forEach(function(stat){ %>
+         		<%= stat.hasDrank %>,
+         	<% }); %>
+         ],
+         backgroundColor: '#dc3912'
+      }, {
+         label: 'DIFFFFF',
+         data: [
+         	<%stats.forEach(function(stat){ %>
+         		<%= stat.diff %>,
+         	<% }); %>
+         ],
+         backgroundColor: '#3366cc'
+      }]
+   },
+   options: {
+      responsive: false,
+      legend: {
+         position: 'right'
+      },
+      scales: {
+         xAxes: [{
+            stacked: true
+         }],
+         yAxes: [{
+            stacked: true
+         }]
+      }
+   }
+});
+
+</script>
+
+
+
+
+

@@ -14,4 +14,12 @@
 <div class="test" value="<%=results.current_observation.temp_f%>"></div>
 <button type="submit" id="exercise" class="btn btn-info">Add 30 minutes of exercise!</button>
 <button type="submit" id="water" class="btn btn-danger">You drank 8oz of water!</button>
-<button type="button" id="reset" class="btn btn-primary">Done for the day?</button>
+
+<form method="POST" action="/chart">
+	<input type="hidden" name="userId" id="userId" value="<%=currentUser.id%>">
+	<input id="hasDrank" name="hasDrank" type="number">
+	<h5> = how many oz you've drank!</h5>
+	<input id="diff" name="diff" type="number">
+	<h5> = you have this many oz left</h5>
+	<button type="submit" id="reset" class="btn btn-primary">Done for the day?</button>
+</form>	
