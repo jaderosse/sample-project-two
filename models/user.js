@@ -41,6 +41,9 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   });
+// user.associate = function(models){
+//   models.user.hasMany(models.stat);
+// }
 
   user.prototype.isValidPassword = function(passwordTyped){
    return bcrypt.compareSync(passwordTyped, this.password);

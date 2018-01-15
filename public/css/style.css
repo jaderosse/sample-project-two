@@ -4,7 +4,17 @@ a {
 }
 
 body {
-	background-image: url("/img/bike.png");
+	background-image: url("/img/blue_fish.png");
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+canvas {
+	width: 85%;
+	height: 85%;
+}
+
+#login-form {
+	text-align: center;
+	vertical-align: center;
 }

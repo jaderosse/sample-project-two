@@ -12,5 +12,8 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   });
+//   stat.associate = function(models){
+//   models.stat.belongsTo(models.user);
+// }
   return stat;
 };

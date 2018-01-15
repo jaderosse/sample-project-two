@@ -21,8 +21,8 @@ var endRain = function(){
 
 
 var test = $('.test').attr('value');
-// var weather = $('.weather').attr('value');
-var weather = 'heavy rain';
+var weather = $('.weather').attr('value');
+// var weather = 'heavy rain';
 if(test >= 50){
 		console.log(test);
 		console.log(weather);
@@ -71,7 +71,6 @@ function endWater(){
 }
 
 function endDiff(){
-
 	$('form').on('submit', function(event) {
     event.preventDefault();
     this.submit();
