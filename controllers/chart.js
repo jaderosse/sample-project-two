@@ -5,7 +5,6 @@ var router = express.Router();
 
 router.get('/', isLoggedIn, function(req, res){
 	db.stat.findAll({
-		//user: [db.user]
 		where: {
 			userId: res.locals.currentUser.id
 		}	
@@ -14,23 +13,9 @@ router.get('/', isLoggedIn, function(req, res){
 	});
 });
 
-// router.get('/', function(req, res){
-// 	db.user.findOne({
-// 		where: {id: req.params.id},
-// 		include: [db.stat]
-// 	}).then(function(user){
-// 		res.render('chart', {user: user});
-// 	});
-// });
-
 router.post('/', function(req, res) {
-	// db.user.findAll({
-	// 	include: [db.stat]
-	// }).then(function(user) {
   	db.stat.create(req.body) 
-  		// {include: [db.user]})
 	.then(function(stat) {
-		// res.render('chart', {stat: stat})
     	res.redirect('/chart');
 	}).catch(function(err){
 		console.log('error', err.message);

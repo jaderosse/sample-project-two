@@ -8,7 +8,7 @@ var chart = new Chart(ctx, {
    data: {
       labels: [
       <% stats.forEach(function(stat){ %>
-      	<%= stat.id %>,
+      	'DAY' + <%= stat.userId %>,
       <% }); %>
       ],
       datasets: [{

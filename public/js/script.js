@@ -22,16 +22,22 @@ var endRain = function(){
 
 var test = $('.test').attr('value');
 var weather = $('.weather').attr('value');
-// var weather = 'heavy rain';
-if(test >= 50){
+	if(test >= 60){
 		console.log(test);
 		console.log(weather);
-		//for each additional 10 degrees add 8oz
 		toDrink += 8;
+	} else if (test >= 70){
+		toDrink += 16;
+	} else if (test >= 80) {
+		toDrink += 24;
+	} else if (test >= 90){
+		toDrink += 40;
+	}
 		var diff = toDrink-waterDrank;
 		$('#diff').val(diff);
 		console.log(toDrink);
-	}
+
+
 if(weather.includes("rain")){
 	console.log('contains rain');
 		document.body.style.backgroundImage = "url('/img/bike_rain.png')";

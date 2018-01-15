@@ -19,14 +19,9 @@ passport.use(new localStrategy({
 	usernameField: 'email',
 	passwordField: 'password'
 }, function(email, password, callback){
-	console.log('got to passport auth');
-	// console.log(email, password);
-	// console.log(locationcity, locationstate);
 	db.user.findOne({
 		where: {email: email}
 	}).then(function(user){
-		console.log('passport promise');
-		// console.log(req.body);
 		if(!user || !user.isValidPassword(password)){
 			callback(null, false);
 		} else {
