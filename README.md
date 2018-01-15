@@ -8,31 +8,36 @@
 * Have semantically clean HTML and CSS
 * Be deployed online and accessible to the public
 
-# Stretch Goals and Pseudocode
-* Player vs AI
-	* Random AI square select
-	* Random placement of AI ships
-	* If AI gets hit, next turn select left, right, up, or down from hit
-* Drag and drop pieces to choose position
-* Hover function to show square selection
-* If..then statement for red and white pieces (hit or miss)
-* Text div, background and content changes with hits
-* Radar animation in background with stop button
-
-# Raw Layout 
+#Wireframes and Beginning Layout
+* insert pictures
 ![AI Board](imgs/Screenshots/Raw-warboat.png)
 
-![Player Board](imgs/Screenshots/raw-your-board.png)
+![Early Profile](public/img/Before-screenshot.png)
+
+#Route Planning
+* Create 1:M relationship between user model for signup/login and stat model to display for each user
+* Use Mocha to test login and signup functionality
+* API call to Weather Underground in profile route
+* Chart route uses Chart.js to create a graph based on daily input for logged in user
+* Nav bar as partial that adapts to user login
+* Resources page displaying my educational links and calculations
+
+
+#Stretch Goals
+* Adaptive profile backgrounds depending on weather conditions from API
+* Calculate drinks based on user age, location, and exercise
+* Icons that respond to location
+* Animations when user clicks exercise/drank water buttons
+* Ability to convert water amounts from ounces
+
 
 # Strategies
-* Grids are composed of clickable divs, each with unique ID
-* Select ships by adding a class to clicked div and use that for opponent to check occupancy
-* Also add "filled" class to divs next to or below selected square
-* If div contains "filled" class upon opponent selection, mark a hit. Otherwise mark a miss.
-* "Helper div" provides instructions, orientation options, and displays hit or miss.
-* Algorithm to randomize AI ship placement as well as orientation
-* AI selects randomly to hit player ships
-* Winner goes to player or computer that reaches 7 hits first.
+* Signup submits to user table with bcrypt password hashing and passport verification
+* User input affects numbers displayed on the front end 
+* User input then saves to stat table upon clicking "done for the day" button
+* Saving day's stat redirects to overall graph, but graph can be viewed at any time
+* Graph logs both water drank and the difference between that and what was calculated for you
+
 
 # Finished Layout
 ![Full Site](imgs/Screenshots/Full-site.png)
@@ -44,16 +49,18 @@
 ![Got a hit](imgs/Screenshots/Got-hit.png)
 
 # Challenges 
-* Removing event listeners to prevent double clicks
-* Adding ship of another size
-* AI ship placement randomization
+* Working with the database logging the correct information
+* Determining the most efficient place to make the call to the API
+* Database associations and accessing data from both tables
+* Creating a fun but professional design in the amount of time I had
 
 # What I'd Do With More Time
-* Add customization/difficulty level with option of more boats with different sizes
-* Give the boats names and have Helper Div specify which boat was hit/sunk
-* Make AI smarter
+* Make a sleeker and customizable profile design
+* Include more factors to work into the water calculations
+* Incorporate more information from the API call
+* Implement an Oauth functionality to allow Facebook login
 
 # What I've Learned
-* How to better utilize jquery
-* Breaking down complex algorithms into manageable steps
-* Efficient Googling!
+* More about the functionality of an ORM (I used Sequelize)
+* How to balance the load on front-end and back-end work
+* Time management for full-stack projects, including design
