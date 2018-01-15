@@ -4,7 +4,7 @@ var exercise = 0;
 var count = 0;
  
 var sunAnimation = function(){
-	document.body.style.backgroundImage = "url('/img/bike_sun-ANIMATION.gif')";
+	document.body.style.backgroundImage = "url('/img/bike_turn_sun-ANIMATION.gif')";
 }
 
 var endSun = function(){
@@ -12,7 +12,7 @@ var endSun = function(){
 }
 
 var rainAnimation = function(){
-	document.body.style.backgroundImage = "url('/img/giffy_rain.gif')";
+	document.body.style.backgroundImage = "url('/img/bike_rain-ANIMATION.gif')";
 }
 
 var endRain = function(){

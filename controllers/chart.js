@@ -5,7 +5,10 @@ var router = express.Router();
 
 router.get('/', isLoggedIn, function(req, res){
 	db.stat.findAll({
-		user: [db.user]
+		//user: [db.user]
+		where: {
+			userId: res.locals.currentUser.id
+		}	
 	}).then(function(stats){
 		res.render('chart', {stats: stats});
 	});

@@ -1,13 +1,5 @@
-<h1>Chart Time</h1>
+<h1>Your Consumption Stats</h1>
 
-<h3>
-	<% stats.forEach(function(stat){ %>
-		<%= stat.userId %>
-	<% }); %>
-</h3>
-<h3>
-	<%= currentUser.id %>
-</h3>
 <canvas id="myChart"></canvas>
 <script>
 var ctx = document.getElementById("myChart").getContext('2d');

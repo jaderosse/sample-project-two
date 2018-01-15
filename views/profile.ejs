@@ -1,8 +1,5 @@
-<h1>This is your funnn profile</h1>
-
-
-<h3>Welcome back, <%= currentUser.firstname %></h3>
-<div class="container">
+<h3 class="text-center">Welcome back, <%= currentUser.firstname %>!</h3>
+<div id="temp-div">
 	<h2>
 		<%= results.current_observation.display_location.city %>
 	</h2>
@@ -11,16 +8,20 @@
 	</h4>
 </div>
 
-<div class="test" value="<%=results.current_observation.temp_f%>"></div>
-<div class="weather" value="<%= results.current_observation.weather%>"></div>
-<button type="submit" id="exercise" class="btn btn-info">Add 30 minutes of exercise!</button>
-<button type="submit" id="water" class="btn btn-danger">You drank 8oz of water!</button>
+<hr>
+<div id="info">
+	<div class="test" value="<%=results.current_observation.temp_f%>"></div>
+	<div class="weather" value="<%= results.current_observation.weather%>"></div>
+	<button type="submit" id="exercise" class="btn btn-info">Add 30 minutes of exercise!</button>
+	<button type="submit" id="water" class="btn btn-danger">You drank 8oz of water!</button>
 
 <form method="POST" action="/chart">
 	<input type="hidden" name="userId" id="userId" value="<%=currentUser.id%>">
+	<h5> How many oz have you had so far?</h5>
 	<input id="hasDrank" name="hasDrank" type="number">
-	<h5> = how many oz you've drank!</h5>
+	<h5> = This is how many oz you still need</h5>
 	<input id="diff" name="diff" type="number">
-	<h5> = you have this many oz left</h5>
+	<br>
 	<button type="submit" id="reset" class="btn btn-primary">Done for the day?</button>
 </form>	
+</div>
