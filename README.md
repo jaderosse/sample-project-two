@@ -9,8 +9,6 @@
 * Be deployed online and accessible to the public
 
 # Wireframes and Beginning Layout
-![Wireframe](public/img/wireframe.png)
-
 ![Early Profile](public/img/Before-screenshot.png)
 
 # Route Planning
