@@ -39,6 +39,8 @@
 # Finished Layout
 ![Final Profile](public/img/final-profile.png)
 
+![Profile With Rain](public/img/rain-profile.png)
+
 ![Final Chart Page](public/img/final-graph.png)
 
 # Challenges 
