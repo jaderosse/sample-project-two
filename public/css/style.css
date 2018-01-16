@@ -37,3 +37,8 @@ canvas {
 	text-align: center;
 	font-size: 50px
 }
+
+#signup {
+	width: 50%;
+	margin-left: 25%;
+}
