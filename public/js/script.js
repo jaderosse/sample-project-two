@@ -55,7 +55,7 @@ $('#exercise').click(function(){
 		sunAnimation();
 		setTimeout(endSun, 5000);
 	}
-	toDrink += 8;
+	toDrink += 16;
 	var diff = toDrink-waterDrank;	
 	$('#diff').val(diff);
 	console.log(toDrink);
