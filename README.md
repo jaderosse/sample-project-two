@@ -9,6 +9,7 @@
 * Be deployed online and accessible to the public
 
 # Wireframes and Beginning Layout
+![Wireframe](public/img/wireframe.png)
 
 ![Early Profile](public/img/Before-screenshot.png)
 
@@ -52,7 +53,6 @@
 * Make a sleeker and customizable profile design
 * Include more factors to work into the water calculations
 * Incorporate more information from the API call
-* Implement an Oauth functionality to allow Facebook login
 * Have a "settings" element in which you can update and save your location
 
 # What I've Learned
