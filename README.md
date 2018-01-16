@@ -8,13 +8,11 @@
 * Have semantically clean HTML and CSS
 * Be deployed online and accessible to the public
 
-#Wireframes and Beginning Layout
-* insert pictures
-![AI Board](imgs/Screenshots/Raw-warboat.png)
+# Wireframes and Beginning Layout
 
 ![Early Profile](public/img/Before-screenshot.png)
 
-#Route Planning
+# Route Planning
 * Create 1:M relationship between user model for signup/login and stat model to display for each user
 * Use Mocha to test login and signup functionality
 * API call to Weather Underground in profile route
@@ -23,7 +21,7 @@
 * Resources page displaying my educational links and calculations
 
 
-#Stretch Goals
+# Stretch Goals
 * Adaptive profile backgrounds depending on weather conditions from API
 * Calculate drinks based on user age, location, and exercise
 * Icons that respond to location
@@ -37,16 +35,12 @@
 * User input then saves to stat table upon clicking "done for the day" button
 * Saving day's stat redirects to overall graph, but graph can be viewed at any time
 * Graph logs both water drank and the difference between that and what was calculated for you
-
+* Calculations include location temperature 
 
 # Finished Layout
-![Full Site](imgs/Screenshots/Full-site.png)
+![Final Profile](public/img/final-profile.png)
 
-![Helper Div](imgs/Screenshots/Ship-option.png)
-
-![Game Start](imgs/Screenshots/Ships-placed.png)
-
-![Got a hit](imgs/Screenshots/Got-hit.png)
+![Final Chart Page](public/img/final-graph.png)
 
 # Challenges 
 * Working with the database logging the correct information
@@ -59,6 +53,7 @@
 * Include more factors to work into the water calculations
 * Incorporate more information from the API call
 * Implement an Oauth functionality to allow Facebook login
+* Have a "settings" element in which you can update and save your location
 
 # What I've Learned
 * More about the functionality of an ORM (I used Sequelize)

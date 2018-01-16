@@ -7,6 +7,8 @@ body {
 	background-image: url("/img/blue_fish.png");
 	background-size: cover;
 	background-repeat: no-repeat;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
 }
 
 canvas {
@@ -15,10 +17,23 @@ canvas {
 }
 
 #login-form {
-	text-align: center;
-	vertical-align: center;
+	margin-top: 100px;
 }
 
 #info {
 	text-align: center;
+}
+
+#hasDrank {
+	width: 150px;
+	height: 100px;
+	text-align: center;
+	font-size: 50px;
+}
+
+#diff {
+	width: 150px;
+	height: 100px;
+	text-align: center;
+	font-size: 50px
 }
