@@ -1,6 +1,7 @@
 require('dotenv').config();
 var express = require('express');
 var db = require('./models');
+var ejs = require('ejs');
 var ejsLayouts = require('express-ejs-layouts');
 var request = require('request');
 var bodyParser = require('body-parser');
